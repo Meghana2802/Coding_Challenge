@@ -1,0 +1,9 @@
+<div>
+        <div class="input-group search-bar">
+          <input type="text" ng-model="search" ng-change="change()" onclick="select()" class="form-control" placeholder="Enter Food name" autofocus />
+          <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+        </div>
+        <div id="main-info" ng-include="'partials/main-info.html'" class="col-md-8"></div>
+
+        <div id="related-results" ng-include="'partials/related-results.html'" class="col-md-4 animated bounce related-results"></div>
+</div>        

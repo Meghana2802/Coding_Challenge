@@ -1,0 +1,27 @@
+<div ng-if="!details">
+  Please select your Food Item from Search Results
+</div>
+
+<div ng-if="details.Response==='True'">
+  <p class="outer-p-2">
+    Food Name: <strong>{{ details.name }}</strong>
+    <a href="" ng-click="addFav(details.name, details.ndbno)">
+      <span class="label label-success"> <i class="glyphicon glyphicon-plus"></i> Add to Favorites </span>
+    </a>
+    <br>
+    <table class="table"> 
+      <thead> 
+        <tr> <th>#</th> <th>Nutrient Name</th> <th>Value</th>  </tr> 
+      </thead> 
+      <tbody> 
+        <tr ng-repeat="nutrient in details.nutrients"> 
+          <th scope="row">{{$index+1}}</th> <td>{{ nutrient.name }}</td> <td>{{ nutrient.value }}{{ nutrient.unit }}</td> 
+        </tr> 
+      </tbody> 
+     </table>
+  </p>
+</div>
+
+<div ng-if="details.Response==='False'">
+  No results found.
+</div>

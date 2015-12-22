@@ -1,0 +1,10 @@
+<div>
+	<strong> My Favorites</strong>
+	<div class="list-group"> 
+	  <a href="" ng-click="update(food)" class="list-group-item" ng-repeat='(key, food) in favorites'>
+	  	{{food.name}}
+
+		<span class="badge" ng-click="removeFav(food.ndbno)">X</span>
+	  </a>
+	</div>
+</div>

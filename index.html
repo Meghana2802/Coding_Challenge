@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" ng-controller="NDBController">
+  <head>
+    <title ng-bind="'NDB  ' + details.Title"></title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div class="container-fluid outerdiv">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/"><b>NDB</b> <span class="span-style">Food Search</span></a>
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/favorites">Favorites</a></li>
+            
+          </ul>
+          </div>
+        </div>
+      </nav>
+
+      <noscript>
+        <div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+      </noscript>
+
+      <div class="animated zoomInRight">
+
+        <div ng-view></div>
+
+      </div>
+    </div>
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-local-storage.js"></script>
+    <script src="js/angular-md5.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

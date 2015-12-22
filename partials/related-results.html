@@ -1,0 +1,9 @@
+<div ng-if="related.Response!=='False'">
+  Search Results:<hr>
+
+  <ul class="rel-results">
+    <li ng-repeat="food in foodSearch.item">
+      <a href="" id="{{ $index + 1 }}" ng-click="update(food)">{{ food.name }}</a>
+    </li>
+  </ul>
+</div>
